@@ -1,4 +1,3 @@
-import { Head, NextScript } from "next/document";
 import { GlobalStyles } from "../styles/global";
 
 interface AppProps {

@@ -1,10 +1,12 @@
-import type { NextPage } from 'next'
+import type { NextPage } from "next";
+import * as S from "./styles"
 
 const Home: NextPage = () => {
   return (
-    <div>
-    </div>
-  )
-}
+    <S.Wrapper>
+      
+    </S.Wrapper>
+  );
+};
 
-export default Home
+export default Home;
