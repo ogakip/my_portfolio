@@ -26,7 +26,9 @@ ul, ol {
     --secundaryColor: #1B8EF2;
     --secundaryColor2: #1A2E40;
 }
-
+button {
+    cursor: pointer;
+}
 @media (min-width: 1024px) {
     body {
         ::-webkit-scrollbar {
