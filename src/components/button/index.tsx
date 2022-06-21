@@ -10,7 +10,7 @@ interface ButtonProps {
   animation: boolean;
   className: string;
   children: React.ReactNode;
-  rest: void;
+  [x: string]: any;
 }
 
 export const Button: React.FC<ButtonProps> = ({
