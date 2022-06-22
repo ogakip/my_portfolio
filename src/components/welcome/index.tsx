@@ -3,7 +3,6 @@ import React from "react";
 import { DiReact } from "react-icons/di";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
-import { Button } from "../button";
 import Link from "next/link";
 
 export default function Welcome() {
@@ -28,22 +27,6 @@ export default function Welcome() {
       </div>
 
       <div className="arrowCircle"></div>
-
-      <Link href="https://cdn.discordapp.com/attachments/978437256807325756/988802757202968607/AnaLauraNunes.pdf">
-        <a>
-          <Button
-            padding="10px"
-            background="var(--secundaryColor2)"
-            color="var(--secundaryColor)"
-            border="none"
-            gap="20px"
-            animation={true}
-            className="download-button"
-          >
-            Baixar currículo <FaDownload />
-          </Button>
-        </a>
-      </Link>
     </S.Wrapper>
   );
 }

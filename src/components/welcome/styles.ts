@@ -4,7 +4,7 @@ import arrowRight from "../../assets/img/ArrowRight.svg"
 
 export const Wrapper = styled.div`
 width: 100%;
-height: calc(100% / 3);
+min-height: calc(100% / 3);
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -54,20 +54,9 @@ gap: 40px;
     }
 }
 
-.download-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    transition: all 0.5s ease;
-
-    :hover {
-        transform: scale(1.13);
-    }
-}
-
 @media (min-width: 1024px) {
     width: calc(100% / 3);
-    height: 100%;
+    min-height: 100%;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
