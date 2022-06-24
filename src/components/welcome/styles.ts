@@ -20,6 +20,7 @@ gap: 40px;
     background-repeat: no-repeat;
     animation: toDown infinite 1s;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .pageTitle {
@@ -32,6 +33,12 @@ gap: 40px;
     width: 50%;
     font-size: 1.5em;
     color: var(--secundaryColor);
+
+    a {
+        :hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .react-icon-spin {
@@ -73,7 +80,7 @@ gap: 40px;
     }
 
     .react-icon-spin {
-        font-size: 350px;
+        font-size: 450px;
         flex: 1;
     }
 
@@ -92,6 +99,7 @@ gap: 40px;
             width: 80%;
             display: flex;
             flex-direction: column;
+            font-size: 35px;
 
             a {
                 color: var(--primaryColor);

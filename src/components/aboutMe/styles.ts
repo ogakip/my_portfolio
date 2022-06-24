@@ -5,7 +5,7 @@ import arrowRight from "../../assets/img/ArrowRight.svg"
 
 export const Wrapper = styled.div`
 width: 100%;
-min-height: calc(100% / 3);
+min-height: calc(100% / 3 + 450px);
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -25,6 +25,7 @@ gap: 20px;
     background-repeat: no-repeat;
     animation: toDown infinite 1s;
     animation-direction: alternate;
+    cursor: pointer;
 }
 
 .btn-box {
@@ -85,6 +86,10 @@ gap: 20px;
     height: 100%;
     position: relative;
 
+    h1 {
+        font-size: 40px;
+    }
+
     .arrowCircle {
         background-image: url(${arrowRight.src});
         animation: toRight infinite 1s;
@@ -108,13 +113,13 @@ gap: 20px;
             max-width: 500px;
 
             >h2 {
-                width: 100%;
-            }
+                width: 70%;
                 align-self: center;
+            }
 
             >p {
                 font-size: 16px;
-                max-width: 100%;
+                max-width: 70%;
             }
         }
     }

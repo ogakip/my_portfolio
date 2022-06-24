@@ -2,7 +2,36 @@ import * as S from "./styles";
 import { Button } from "../button";
 import Link from "next/link";
 
-export default function AboutMe() {
+interface AboutProps {
+  screenSizeFunction: any
+}
+
+export default function AboutMe({ screenSizeFunction }: AboutProps) {
+  const getWindowSize = screenSizeFunction()
+  const { width, height } = getWindowSize
+  const windowIsLoaded = typeof window !== 'undefined';
+
+  function scroll (width: number, height: number) {
+    const currentX = window.scrollX
+    const currentY = window.scrollY
+
+    if (width) {
+      if (width < 1024) {
+        scrollTo({
+          top: currentY + height,
+          left: 0,
+          behavior: "smooth"
+        })
+      } else {
+        scrollTo({
+          top: 0,
+          left: currentX + width,
+          behavior: "smooth"
+        })
+      }
+    }
+  }
+
   return (
     <S.Wrapper>
       <h1 className="pageTitle">Sobre mim</h1>
@@ -42,33 +71,37 @@ export default function AboutMe() {
       </div>
       <div className="btn-box">
         <Link href="/projects">
-            <Button
-              padding="15px"
-              color="var(--secundaryColor)"
-              background="var(--secundaryColor2)"
-              border="none"
-              className=""
-              gap="none"
-              animation={false}
-            >
-              Ir para projetos
-            </Button>
+            <a>
+                <Button
+                  padding="15px"
+                  color="var(--secundaryColor)"
+                  background="var(--secundaryColor2)"
+                  border="none"
+                  className=""
+                  gap="none"
+                  animation={false}
+                >
+                  Ir para projetos
+                </Button>
+            </a>
         </Link>
         <Link href="/contact">
-            <Button
-              padding="15px"
-              color="var(--secundaryColor)"
-              background="var(--secundaryColor2)"
-              border="none"
-              className=""
-              gap="none"
-              animation={false}
-            >
-              Ir para contatos
-            </Button>
+            <a>
+                <Button
+                  padding="15px"
+                  color="var(--secundaryColor)"
+                  background="var(--secundaryColor2)"
+                  border="none"
+                  className=""
+                  gap="none"
+                  animation={false}
+                >
+                  Ir para contatos
+                </Button>
+            </a>
         </Link>
       </div>
-      <div className="arrowCircle"></div>
+      <div onClick={() => { scroll(width, height) }} className="arrowCircle"></div>
     </S.Wrapper>
   );
 }
