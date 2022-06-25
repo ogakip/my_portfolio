@@ -3,7 +3,6 @@ import React from "react";
 import { DiReact } from "react-icons/di";
 import { BsArrowRightCircle, BsArrowDownCircle } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
-import Link from "next/link";
 
 interface WelcomeProps {
   screenSizeFunction: any
@@ -48,10 +47,10 @@ export default function Welcome({ screenSizeFunction  }: WelcomeProps) {
         <p>
           Olá, me chamo Paulo.
           <span>
-            Seja bem vindo o meu cantinho, desenvolvido em{" "}
-            <Link className="toNextDocs" href="https://nextjs.org/">
+            Seja bem vindo ao meu cantinho, desenvolvido em{" "}
+            <a className="toNextDocs" href="https://nextjs.org/">
               Next Js.
-            </Link>
+            </a>
           </span>
         </p>
       </div>

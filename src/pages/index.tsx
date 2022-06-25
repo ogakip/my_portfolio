@@ -1,24 +1,26 @@
 import type { NextPage } from "next";
-import * as S from "./styles";
+import * as S from "../styles/homePageStyles";
 import Welcome from "../components/welcome";
 import AboutMe from "../components/aboutMe";
 import { FaDownload } from "react-icons/fa";
 import Link from "next/link";
 import { Button } from "../components/button";
 import HardSkills from "../components/skills";
-import { useState, useEffect } from "react";
-import useWindowSize from "./getWindowSize";
+import useWindowSize from "../utils/getWindowSize";
+import Head from "next/head";
 
 const Home: NextPage = () => {
   const getWindowSize = useWindowSize();
 
   return (
     <S.Wrapper id="teste">
+      <Head>
+        <title>Sobre mim</title>
+      </Head>
       <Welcome screenSizeFunction={useWindowSize} />
       <AboutMe screenSizeFunction={useWindowSize} />
       <HardSkills />
-      <Link href="https://drive.google.com/file/d/1xizo2e31-rrZ9YNIfKbo3U26SpM8lqZQ/view?usp=sharing">
-        <a>
+        <a href="/meContrate.pdf">
           <Button
             padding="10px"
             background="var(--secundaryColor2)"
@@ -31,7 +33,6 @@ const Home: NextPage = () => {
             Baixar currículo <FaDownload />
           </Button>
         </a>
-      </Link>
     </S.Wrapper>
   );
 };

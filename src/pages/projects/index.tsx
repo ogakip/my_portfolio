@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from "../../styles/projectPageStyles";
 import { Project } from "../../components/project";
 import fteamImg from "../../assets/img/background-fteam.png";
 import kenziehubImg from "../../assets/img/background-kenziehub.png";
@@ -9,37 +9,45 @@ import kenzieshioImg from "../../assets/img/background-kenzieshop.png";
 import { Button } from "../../components/button";
 import { FaDownload } from "react-icons/fa";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Projects() {
   return (
     <S.Wrapper>
+      <Head>
+        <title>Projetos</title>
+      </Head>
       <div className="nav">
         <h1>Meus projetos</h1>
         <Link href="/contact">
-          <Button
-            padding="10px"
-            color="var(--secundaryColor)"
-            gap="20px"
-            animation={false}
-            border="none"
-            background="var(--secundaryColor2)"
-            className=""
-          >
-            Ir para contatos
-          </Button>
+          <a>
+            <Button
+              padding="10px"
+              color="var(--secundaryColor)"
+              gap="20px"
+              animation={false}
+              border="none"
+              background="var(--secundaryColor2)"
+              className=""
+            >
+              Ir para contatos
+            </Button>
+          </a>
         </Link>
         <Link href="/">
-          <Button
-            padding="10px"
-            color="var(--secundaryColor)"
-            gap="20px"
-            animation={false}
-            border="none"
-            background="var(--secundaryColor2)"
-            className=""
-          >
-            Ir para sobre mim
-          </Button>
+          <a>
+            <Button
+              padding="10px"
+              color="var(--secundaryColor)"
+              gap="20px"
+              animation={false}
+              border="none"
+              background="var(--secundaryColor2)"
+              className=""
+            >
+              Ir para sobre mim
+            </Button>
+          </a>
         </Link>
       </div>
       <S.ListSkillsBox>
@@ -92,21 +100,19 @@ export default function Projects() {
           img={kenzieshioImg}
         />
       </S.ListSkillsBox>
-      <Link href="https://drive.google.com/file/d/1xizo2e31-rrZ9YNIfKbo3U26SpM8lqZQ/view?usp=sharing">
-        <a>
-          <Button
-            padding="10px"
-            background="var(--secundaryColor2)"
-            color="var(--secundaryColor)"
-            border="none"
-            gap="20px"
-            animation={true}
-            className="download-button"
-          >
-            Baixar currículo <FaDownload />
-          </Button>
-        </a>
-      </Link>
+          <a href="/meContrate.pdf" download="meContrate">
+            <Button
+              padding="10px"
+              background="var(--secundaryColor2)"
+              color="var(--secundaryColor)"
+              border="none"
+              gap="20px"
+              animation={true}
+              className="download-button"
+            >
+              Baixar currículo <FaDownload />
+            </Button>
+          </a>
     </S.Wrapper>
   );
 }

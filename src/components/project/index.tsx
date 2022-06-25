@@ -23,19 +23,23 @@ export const Project: React.FC<ProjectProps> = ({
   return (
     <S.Wrapper className={className}>
       <div className="goToLink">
-        <Link href={link}>
-          <a target="_blank">Visitar Link</a>
-        </Link>
+        <a href={link} rel="noreferrer" target="_blank">
+          Visitar Link
+        </a>
       </div>
       <S.ImageBox>
-        <Image src={img.src} width="100px" height="100px"/>
+        <Image
+          priority={true}
+          src={img.src}
+          width="100px"
+          height="100px"
+          alt=""
+        />
         <div className="goToRepo">
-            <Link href={github}>
-              <a target="_blank">
-                <AiFillGithub className="github-icon" />
-              </a>
-            </Link>
-            <span>Repositório</span>
+          <a href={github} rel="noreferrer" target="_blank">
+            <AiFillGithub className="github-icon" />
+          </a>
+          <span>Repositório</span>
         </div>
       </S.ImageBox>
       <S.DescriptionBox>
