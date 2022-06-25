@@ -28,7 +28,7 @@ export const Project: React.FC<ProjectProps> = ({
         </Link>
       </div>
       <S.ImageBox>
-        <Image src={img.src} width="100px" height="100px" objectFit="contain" />
+        <Image src={img.src} width="100px" height="100px"/>
         <div className="goToRepo">
             <Link href={github}>
               <a target="_blank">

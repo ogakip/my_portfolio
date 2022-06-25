@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       <Welcome screenSizeFunction={useWindowSize} />
       <AboutMe screenSizeFunction={useWindowSize} />
       <HardSkills />
-      <Link href="https://cdn.discordapp.com/attachments/978437256807325756/988802757202968607/AnaLauraNunes.pdf">
+      <Link href="https://drive.google.com/file/d/1xizo2e31-rrZ9YNIfKbo3U26SpM8lqZQ/view?usp=sharing">
         <a>
           <Button
             padding="10px"

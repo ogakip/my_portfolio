@@ -15,14 +15,30 @@ export default function Projects() {
     <S.Wrapper>
       <div className="nav">
         <h1>Meus projetos</h1>
-        <Link href="/contatos">
-          <Button padding="10px" color="var(--secundaryColor)" gap="20px" animation={false} border="none" background="var(--secundaryColor2)" className="">
-              Ir para contatos
+        <Link href="/contact">
+          <Button
+            padding="10px"
+            color="var(--secundaryColor)"
+            gap="20px"
+            animation={false}
+            border="none"
+            background="var(--secundaryColor2)"
+            className=""
+          >
+            Ir para contatos
           </Button>
         </Link>
         <Link href="/">
-          <Button padding="10px" color="var(--secundaryColor)" gap="20px" animation={false} border="none" background="var(--secundaryColor2)" className="">
-              Ir para sobre mim
+          <Button
+            padding="10px"
+            color="var(--secundaryColor)"
+            gap="20px"
+            animation={false}
+            border="none"
+            background="var(--secundaryColor2)"
+            className=""
+          >
+            Ir para sobre mim
           </Button>
         </Link>
       </div>
@@ -76,7 +92,7 @@ export default function Projects() {
           img={kenzieshioImg}
         />
       </S.ListSkillsBox>
-      <Link href="https://cdn.discordapp.com/attachments/978437256807325756/988802757202968607/AnaLauraNunes.pdf">
+      <Link href="https://drive.google.com/file/d/1xizo2e31-rrZ9YNIfKbo3U26SpM8lqZQ/view?usp=sharing">
         <a>
           <Button
             padding="10px"
