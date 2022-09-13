@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Button } from "../components/button";
 import HardSkills from "../components/skills";
 import { useState, useEffect } from "react";
-import useWindowSize from "./getWindowSize";
+import useWindowSize from "../utils/getWindowSize";
 
 const Home: NextPage = () => {
   const getWindowSize = useWindowSize();
