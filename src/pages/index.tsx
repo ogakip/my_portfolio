@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import * as S from "./styles";
+import * as S from "../pages-styles/indexStyles";
 import Welcome from "../components/welcome";
 import AboutMe from "../components/aboutMe";
 import { FaDownload } from "react-icons/fa";

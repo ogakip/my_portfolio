@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from "../../pages-styles/contactStyles";
 import { AiFillLinkedin } from "react-icons/ai";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";

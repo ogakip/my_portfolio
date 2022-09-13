@@ -1,4 +1,4 @@
-import * as S from "./styles";
+import * as S from "../../pages-styles/proctsStyles";
 import { Project } from "../../components/project";
 import fteamImg from "../../assets/img/background-fteam.png";
 import kenziehubImg from "../../assets/img/background-kenziehub.png";
